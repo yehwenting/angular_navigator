@@ -13,6 +13,7 @@ import { EcmPageComponent } from './ecm-page/ecm-page.component';
 import { TMPageComponent } from './tm-page/tm-page.component';
 import { TempPageComponent } from './temp-page/temp-page.component';
 import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
+import { FavoritePageComponent } from './favorite-page/favorite-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     EcmPageComponent,
     TMPageComponent,
     TempPageComponent,
-    BottomNavComponent
+    BottomNavComponent,
+    FavoritePageComponent
   ],
   imports: [
     BrowserModule,
