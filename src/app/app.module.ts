@@ -5,14 +5,14 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import {ServerComponent} from './server/server.component';
+import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { EcmPageComponent } from './ecm-page/ecm-page.component';
 import { TMPageComponent } from './tm-page/tm-page.component';
 import { TempPageComponent } from './temp-page/temp-page.component';
-
+import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -32,6 +32,7 @@ const appRoutes: Routes = [
     EcmPageComponent,
     TMPageComponent,
     TempPageComponent,
+    BottomNavComponent
   ],
   imports: [
     BrowserModule,

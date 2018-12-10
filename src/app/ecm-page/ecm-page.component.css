@@ -1,0 +1,28 @@
+.main{
+    background-color: #f2f2f2;
+    height: 620px;
+}
+.techManage, .favorites, .searches{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background-color: white;
+}
+.inbox{
+    margin-right: 15px;
+}
+.space{
+    height: 30px;
+}
+
+.space1{
+    height: 15px;
+}
+.bottom_nav{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
