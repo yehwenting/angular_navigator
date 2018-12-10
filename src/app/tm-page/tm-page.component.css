@@ -40,3 +40,10 @@
     text-align: left;
     
 }
+
+.bottom_nav{
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
