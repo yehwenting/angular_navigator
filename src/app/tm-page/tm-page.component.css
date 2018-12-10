@@ -1,0 +1,35 @@
+.navbar{
+    background-color: #3c73c1;
+    margin-bottom: 0px;
+}
+.navbar-brand{
+    width: 85%;
+}
+
+.title{
+    color: white;
+    text-align: center;
+    padding-left:60px;
+}
+.more{
+    margin-top: 9px;
+    margin-right: 12px;
+}
+
+.search {
+    width: 90%;
+    border-radius: 6px;
+}
+
+.searchbar {
+    padding: 6px 0;
+    background-color: rgb(223, 223, 223);
+}
+
+.list-icon {
+    text-align: left;
+}
+
+.mat-line {
+    text-align: left;
+}

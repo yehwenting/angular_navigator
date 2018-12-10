@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#"> <p class="title">技術管理</p> </a>
+  <img
+    src="../assets/images/more.png"
+    width="30"
+    height="30"
+    class="more d-inline-block align-left"
+    alt=""
+  />
+</nav>
+
+<div class="searchbar">
+  <img src="../assets/images/search.png" width="15" height="15" alt="" />
+  <input
+    type="text"
+    class="search"
+    id="search-text"
+    placeholder="搜尋位置技術管理"
+  />
+</div>
+
+<mat-list>
+  <mat-list-item *ngFor="let item of list">
+    <img
+      src="../assets/images/folder.png"
+      width="25"
+      height="25"
+      class="list-icon"
+      alt=""
+    />
+    <h4 mat-line [routerLink]="['/', item]">{{ item }}</h4>
+  </mat-list-item>
+</mat-list>
