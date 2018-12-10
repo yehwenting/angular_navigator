@@ -25,20 +25,15 @@
     padding: 6px 0;
     background-color: rgb(223, 223, 223);
 }
-/* 
+
 .list-icon {
-    text-align: left;
-} */
+    margin-right: 10px;
+}
 
-/* .mat-line {
-    text-align: left;
-} */
-
-.mat-list-item{
+.list-item{
     display: flex;
     flex-direction: row;
     text-align: left;
-    
 }
 
 .bottom_nav{
