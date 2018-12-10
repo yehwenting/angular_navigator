@@ -1,19 +1,25 @@
 .navbar{
     background-color: #3c73c1;
     margin-bottom: 0px;
+    display: flex;
+    flex-direction: row;
 }
 .navbar-brand{
-    width: 85%;
+    /* width: 85%; */
 }
 
 .title{
     color: white;
     text-align: center;
-    padding-left:60px;
+    /* padding-left:60px; */
 }
+
+mat-icon {
+    margin: auto 0 auto 5px;
+}
+
 .more{
-    margin-top: 9px;
-    margin-right: 12px;
+    margin: auto 12px auto 0;
 }
 
 .search {
