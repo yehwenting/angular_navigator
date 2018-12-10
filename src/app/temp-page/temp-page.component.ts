@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 })
 export class TempPageComponent implements OnInit {
 
+  page ;
+  currentPage;
+
   constructor(private router: Router) { }
 
   ngOnInit() {

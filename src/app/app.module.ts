@@ -16,7 +16,7 @@ import { BottomNavComponent } from './bottom-nav/bottom-nav.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HeaderComponent },
+  { path: 'home', component: EcmPageComponent },
   { path: 'tm-page',  component: TMPageComponent },
   { path: 'CustomerDossiers', component: TempPageComponent},
   { path: 'TemplateDossierStructure', component: TempPageComponent},
