@@ -2,6 +2,6 @@
   <a class="navbar-brand" href="#">
     <p class="title">{{name}}</p>
   </a>
-  <img src="../assets/images/barcode.png" width="30" height="30" class="scan d-inline-block align-left" alt="">
+  <img src="../assets/images/barcode.png" width="30" height="30" [ngClass]="getStatus()" class="scan d-inline-block align-left" alt="" >
 
 </nav>

@@ -3,15 +3,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from "@angular/router"
 
 import { AppComponent } from './app.component';
-import {ServerComponent} from './server/server.component';
+import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
-import { EcmPageComponent } from './ecm-page/ecm-page.component'
+import { EcmPageComponent } from './ecm-page/ecm-page.component';
+import { BottomNavComponent } from './bottom-nav/bottom-nav.component'
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HeaderComponent },
+  { path: 'home', component: EcmPageComponent },
 
 ];
 
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     ServersComponent,
     HeaderComponent,
     LoginComponent,
-    EcmPageComponent
+    EcmPageComponent,
+    BottomNavComponent
   ],
   imports: [
     BrowserModule,

@@ -8,9 +8,20 @@ import { Component, OnInit ,Input} from '@angular/core';
 export class HeaderComponent implements OnInit {
   
   @Input() name: string;
+  @Input() scanstatus: string;
 
-  constructor() { }
 
+  constructor() { 
+    
+  }
+
+  getStatus(){
+    if(this.scanstatus==="hide"){
+      return "hide";
+    }else{
+      return "";
+    }
+  }
   ngOnInit() {
   }
 
