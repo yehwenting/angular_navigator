@@ -1,0 +1,15 @@
+
+<app-header name="IBM Navigator"></app-header>
+
+<div>
+<input type="text" id="account" placeholder="帳號" name="fname" [ngStyle]="{'border-bottom':border}" (click)="onTextClick('account')">
+</div>
+<div>
+<input type="text" id="password" placeholder="密碼" name="fname" [ngStyle]="{'border-bottom':border1}" (click)="onTextClick('password')">
+</div>
+<div>
+<input type="text" id="url" placeholder="IBM Navigator URL" name="fname" [ngStyle]="{'border-bottom':border2}" (click)="onTextClick('url')">
+</div>
+<button type="button" class="btn btn-primary" routerLink="/home">登入</button>
+<div class="organization">使用組織的登入頁面</div>
+

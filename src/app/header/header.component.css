@@ -1,0 +1,15 @@
+.navbar{
+    background-color: #3c73c1;
+}
+.navbar-brand{
+    width: 90%;
+}
+.title{
+    color: white;
+    text-align: center;
+    padding-left:40px;
+}
+.scan{
+    margin-top: 9px;
+    margin-right: 7px;
+}
