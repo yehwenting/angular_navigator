@@ -1,7 +1,7 @@
-import { Component, OnInit} from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-// import a from '../../assets/value.json';
-import * as a from '../../assets/value.json';
+import { Component, OnInit} from '@angular/core';;
+import { Router } from '@angular/router';
+import * as b from '../../assets/filePath.json';
+
 
 @Component({
   selector: 'app-tm-page',
@@ -10,75 +10,43 @@ import * as a from '../../assets/value.json';
 })
 export class TMPageComponent implements OnInit {
 
-
-  // list: string[] = ['CustomerDossiers', 'TemplateDossierStructure', '個人待辦事項', '個人草稿區', '專案資料夾', '技術內容文件', '新北市捷運工程局', '新北市捷運線', '歷史查詢', '測試資料夾', '部門分類', '測試資料夾', '部門分類'];
-
-  tData = JSON.stringify(a);
+  tData = JSON.stringify(b);
   file_path = JSON.parse(this.tData)['default'];
   originItem = this.file_path;
-  // originItem:  Array<string> = a;
-  // displayValue: Array<string> = a;
   title = '技術管理';
-  // data = JSON.stringify(this.tData);
 
-  constructor(private route: ActivatedRoute) {
-    // console.log(a.length);
-    // console.log(this.file_path[0]);
-    // console.log(JSON.parse(a));
-    // console.log("const: ", this.displayValue);
+  constructor(private router: Router) { }
 
-  }
-
-  getValue(t) {
-    // const title = this.title;
-    // console.log(title);
-    // const k = this.originItem.filter(function(item, index, array) {
-    //   console.log(item);
-    //   return item.name === title;
-    // });
-    // // console.log(t.name, t.children);
-    // console.log(k);
-    // this.file_path = k[0].children;
-    // console.log(this.file_path);
-    // // this.title = t.name;
-
+  go2next(t) {
+    this.title = t.name;
+    this.file_path = this.originItem.filter((item, index, array) => {
+      return item.parent === this.title;
+    });
   }
 
   back() {
-    const title = this.title;
-    console.log('current title', title);
-    const k = this.originItem.filter(function(item, index, array) {
-      const len = item.children.length;
-      for (let i = 0; i < len; i++) {
-        return item.children[i].name === title;
-      }
+    const p = this.originItem.find((item, index, array) => {
+      return item.name === this.title;
     });
-    console.log('back', k);
-    this.title = k[0].name;
-    this.file_path = k;
-    // console.log('back', this.file_path);
-    // console.log('back origin', this.originItem);
+    if (p === undefined) {
+      this.router.navigate(['/home']);
+    } else {
+      this.file_path = this.originItem.filter((item, index, array) => {
+        return item.parent === p.parent;
+      });
+
+      if (p.parent === '') {
+        this.title = '技術管理文件';
+      } else {
+        this.title = p.parent;
+      }
+    }
 
 
   }
   ngOnInit() {
-    this.route.params.subscribe(params => {
-      // console.log(params['name']);
-      if (params['name'] !== undefined) {
-        this.title = params['name'];
-      }
-
-    const title = this.title;
-    console.log(title);
-    const k = this.file_path.filter(function(item, index, array) {
-      console.log(item);
-      return item.name === title;
-    });
-    // console.log(t.name, t.children);
-    console.log(k);
-    this.file_path = k[0].children;
-    console.log(this.file_path);
-    // this.title = t.name;
+    this.file_path = this.originItem.filter(function(item, index, array) {
+      return item.parent === '';
     });
   }
 

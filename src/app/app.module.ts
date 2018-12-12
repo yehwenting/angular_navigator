@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
-import { Routes, RouterModule } from "@angular/router"
+import { RouterModule, Routes } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
@@ -21,7 +21,6 @@ const appRoutes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: EcmPageComponent },
   { path: 'tm-page',  component: TMPageComponent },
-  { path: 'tm-page/:name', component: TMPageComponent},
   { path: 'submit', component: SubmitApprovalComponent }
 ];
 

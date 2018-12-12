@@ -1,0 +1,106 @@
+[{
+    "name": "CustomerDossiers",
+    "parent": "",
+    "children": [{"name" : "eee"},{"name": "test"}] 
+},{
+    "name": "eee",
+    "parent": "CustomerDossiers",
+    "children": [{"name" : "Claims"},{"name": "Contract"},{"name": "Orders"}]
+},{
+    "name": "test",
+    "parent": "CustomerDossiers",
+    "children": []
+}, {
+    "name": "Claims",
+    "parent": "eee",
+    "children": []
+},{
+    "name": "Contracts",
+    "parent": "eee",
+    "children": []
+},{
+    "name": "Orders",
+    "parent": "eee",
+    "children": []
+},{
+    "name": "技術內容文件",
+    "parent": "",
+    "children": [{"name" : "01.-圖"},{"name": "02.-準則規範"},{"name": "03.-報告(簽呈)"},{"name": "04.-計畫書"}]
+},{
+    "name": "01.-圖",
+    "parent": "技術內容文件",
+    "children": [{"name" : "01.-PID圖"},{"name": "02.-工程圖"}]
+},{
+    "name": "02.-準則規範",
+    "parent": "技術內容文件",
+    "children": []
+},{
+    "name": "03.-報告(簽呈)",
+    "parent": "技術內容文件",
+    "children": []
+},{
+    "name": "04.-計畫書",
+    "parent": "技術內容文件",
+    "children": []
+},{
+    "name": "01.-PID圖",
+    "parent": "01.-圖",
+    "children": []
+},{
+    "name": "02.-工程圖",
+    "layer": 3,
+    "parent": "01.-圖",
+    "children": []
+},{
+    "name": "新北市捷運工程局",
+    "parent": "",
+    "children": [{"name" : "01 綜合規劃科"},{"name": "02 土木建築科"},{"name": "03 工程管理科"},{"name": "04 技術發展科"},{"name": "05 機電系統科"},{"name": "06 土地開發科"}]
+},{
+    "name": "01 綜合規劃科",
+    "parent": "新北市捷運工程局",
+    "children": []
+},{
+    "name": "02 土木建築科",
+    "parent": "新北市捷運工程局",
+    "children": []
+},{
+    "name": "03 工程管理科",
+    "parent": "新北市捷運工程局",
+    "children": [{"name" : "合約"},{"name": "圖類"},{"name": "報告"},{"name": "手冊"},{"name": "會議記錄"},{"name": "設計文件"}]
+},{
+    "name": "04 技術發展科",
+    "parent": "新北市捷運工程局",
+    "children": []
+},{
+    "name": "05 機電系統科",
+    "parent": "新北市捷運工程局",
+    "children": []
+},{
+    "name": "06 土地開發科",
+    "parent": "新北市捷運工程局",
+    "children": []
+},{
+    "name": "合約",
+    "parent": "03 工程管理科",
+    "children": []
+},{
+    "name": "圖類",
+    "parent": "03 工程管理科",
+    "children": []
+},{
+    "name": "報告",
+    "parent": "03 工程管理科",
+    "children": []
+},{
+    "name": "手冊",
+    "parent": "03 工程管理科",
+    "children": []
+},{
+    "name": "會議記錄",
+    "parent": "03 工程管理科",
+    "children": []
+},{
+    "name": "設計文件",
+    "parent": "03 工程管理科",
+    "children": []
+}]

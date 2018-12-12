@@ -16,7 +16,7 @@
 </div>
 
 <mat-list>
-  <mat-list-item class="list-item" *ngFor="let item of file_path" (click)=getValue(item); [routerLink]="['/tm-page', item.name]" >
+  <mat-list-item class="list-item" *ngFor="let item of file_path" (click)=go2next(item);>
     <img src="../assets/images/folder.png" width="25" height="25" class="list-icon" style="flex:1;" alt=""/>
     <h4  style="flex: 13;" >{{ item.name }}</h4>
     <img src="../assets/images/right_arrow.png" width="15" height="15"  class="right d-inline-block align-left" alt="" style="flex:1;">
