@@ -1,0 +1,76 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <p class="title">{{name}}</p>
+  </a>
+</nav>
+<div>
+  <div class="list_title">繳檔簽核單</div>
+  <table style="width: 100%; margin: 7px 0px;">
+    <tr>
+      <th>本單編號</th>
+      <td>20181210000002</td>
+    </tr>
+    <tr>
+      <th>公司部門</th>
+      <td>(60210)<br>台塑石化安全<br>衛生處公安組</td>
+    </tr>
+    <tr>
+      <th>表單產生日期</th>
+      <td>2018/12/10</td>
+    </tr>
+    <tr>
+      <th>預計完成日</th>
+      <td>2019/1/2</td>
+    </tr>
+    <tr>
+      <th>承辦人</th>
+      <td>陳XX</td>
+    </tr>
+  </table>    
+</div>
+<div>
+  <div class="list_title">技術文件清單</div>
+  <ul style="list-style-type:none; padding: 7px 0px;" >
+    <li>工程契約.docx<img src="../assets/images/more_b.png" width="24" height="24" class="more_icon"></li>
+    <li>保養手冊.docx<img src="../assets/images/more_b.png" width="24" height="24" class="more_icon"></li>
+  </ul>
+</div>
+<div>
+  <div class="list_title">下一位核簽人員</div>
+  <ul style="list-style-type:none; padding: 7px 0px;" >
+    <li>{{sub_per}}<button class="s_btn"  (click)="popup()">更換</button></li>
+  </ul>
+</div>
+<div>
+  <div class="footer">
+    <button class="b_btn" (click)="popup_sign()">核準</button>
+    <button class="b_btn" routerLink="/home">退回</button>
+  </div>
+</div>
+
+<div class="modal">
+  <div class="modal-content" id="choose_per">
+    <mat-radio-group class="example-radio-group">
+    <!-- <mat-radio-group class="example-radio-group" [(ngModel)]="sub_per"> -->
+      <mat-radio-button class="example-radio-button" *ngFor="let person of personnel" [value]="person">
+        {{person}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <br>
+    <button class="b_btn" (click)="close_popup()">更換</button>
+    
+  </div>
+</div>
+
+<div class="modal_sign">
+    <div class="modal-content" id="choose_per">
+        <div class="list_title">簽名欄</div>
+        <textarea rows="10" cols="30" style="border: 0.5px black solid">
+        
+        </textarea>
+        <button class="b_btn" (click)="close_popup_sign()">完成</button>
+        <button class="b_btn" (click)="close_popup_sign()">取消</button>
+      
+      
+    </div>
+  </div>
