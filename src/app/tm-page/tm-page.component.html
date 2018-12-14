@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
   <mat-icon style="color: white; flex: 1;" (click)=back(); >arrow_back_ios</mat-icon>  
   <a class="navbar-brand" href="#" style="flex: 13;"> <p class="title">{{ title }}</p> </a>
-  <img src="../assets/images/more.png" width="30" height="30" class="more d-inline-block align-left" style="flex: 1;" alt="">
+  <img src="../assets/images/more.png" width="30" height="30" class="more d-inline-block align-left" style="flex: 1;" alt="" (click)=addFile();>
 </nav>
 
 
@@ -15,6 +15,8 @@
   />
 </div>
 
+
+
 <mat-list>
   <mat-list-item class="list-item" *ngFor="let item of file_path" (click)=go2next(item);>
     <img src="../assets/images/folder.png" width="25" height="25" class="list-icon" style="flex:1;" alt=""/>
@@ -23,3 +25,32 @@
   </mat-list-item>
 </mat-list>
 <app-bottom-nav class="bottom_nav"></app-bottom-nav>
+
+<div class="modal" (click)=closeModal();>
+    <div class="modal-content" id="choose_per">
+        <div class="option" (click)=newFile();>新增資料夾</div>
+        <div class="option" (click)=uploadFile();>上傳檔案</div>
+    </div>
+  </div>
+
+  <div class="modal_upload">
+    <div class="modal-content-upload" id="choose_per">
+        <div class="list_title">檔案上傳</div>
+        <input id="fileupload" name="myfile" type="file" #file (change)="fileEvent(file)" />
+        <button class="b_btn" (click)="close_popup_upload()">完成</button>
+        <button class="b_btn" (click)="close_popup_upload()">取消</button>
+    </div>
+  </div>
+
+  <div class="modal_new">
+      <div class="modal-content-upload" id="choose_per">
+          <div class="list_title">新增資料夾</div>
+          <div class="filename"> 
+              <span>檔案名稱：</span>
+              <input id="filenew" value="" type="text" #ref />
+          </div>
+          <br/>
+          <button class="b_btn" (click)="finish(ref.value)">完成</button>
+          <button class="b_btn" (click)="close_popup_upload()">取消</button>
+      </div>
+    </div>
